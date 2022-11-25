@@ -1,7 +1,42 @@
 https://173.249.49.45:52254/
 
+https://extendsclass.com/rest-client-online.html
 
+RUN all the command after 
 
+lando ssh 
 
 https://larainfo.com/blogs/laravel-9-rest-api-crud-tutorial-example
+
+1. Create Post Modal with migration
+   php artisan make:model Post -m
+2. Create Post Request for validation
+   php artisan make:request StorePostRequest
+3. Create Post Resource for show clean data
+   php artisan make:resource PostResource
+4. Create Post Api controller
+   php artisan make:controller Api/PostController --model=Post 
+
+
+GET  https://173.249.49.45:52271/api/posts
+
+POST  https://173.249.49.45:52271/api/posts
+
+{
+
+    "title": "post2",
+    "description": "post2 description"
+}
+
+
+content-type: application/json
+
+
+Update: 
+POST : https://173.249.49.45:52271/api/posts/1
+{
+	"_method": "PUT",
+    "title": "post1 update title"
+
+}
 
