@@ -1,0 +1,4 @@
+name: l9fluttter
+recipe: laravel
+config:
+  webroot: app/public
