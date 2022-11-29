@@ -40,3 +40,93 @@ POST : https://173.249.49.45:52271/api/posts/1
 
 }
 
+
+
+
+REST crud 2
+-----------
+https://www.tutsmake.com/laravel-9-rest-api-crud-example-tutorial/
+
+
+    Login API
+    Register API
+    GetUser Info API
+    Product List API
+    Create Product API
+    Edit Product API
+    Update Product API
+    Delete Product API
+
+    1. Install Passport Auth
+    composer require laravel/passport
+
+     register providers. Open config/app.php. and put the bellow code :
+
+
+     install passport keys
+      php artisan migrate  && php artisan passport:install
+
+Personal access client created successfully.
+Client ID: 1
+Client secret: nyZrXVw2KafRp66UagSwJBs8yuE8FpIMmx9RHH0N
+Password grant client created successfully.
+Client ID: 2
+Client secret: qJCb8lOgGZE8GbjetaK9AO0U1vAH66OlVyD3MPTC
+
+2. Register passport routes in AuthServiceProvider
+
+
+config/auth.php
+
+'api' => [ 
+             'driver' => 'passport', 
+             'provider' => 'users', 
+         ], 
+
+
+3. create product table
+php artisan make:model Product -m
+
+fillable field and run migrate 
+
+
+Step 6: Create Auth and CRUD APIs Route
+
+Step 7: Create Passport Auth and CRUD Controller
+
+ php artisan make:controller Api\PassportAuthController
+ php artisan make:controller Api\ProductController
+
+
+
+
+todo :
+
+route has errors : fixed
+debug : 
+RUN all route 
+
+
+
+laravel 9 rest api pagination
+https://www.techiediaries.com/rest-api-laravel-9/
+
+https://dev.to/techtoolindia/getting-started-with-laravel-9-secured-rest-api-390g
+
+https://www.positronx.io/build-secure-php-rest-api-in-laravel-with-sanctum-auth/
+
+https://larainfo.com/blogs/laravel-9-rest-api-crud-tutorial-example
+
+https://www.itsolutionstuff.com/post/laravel-9-rest-api-authentication-using-sanctum-tutorialexample.html
+
+
+
+https://adhiskara.medium.com/flutter-crud-dengan-laravel-api-crud-with-laravel-rest-api-part-i-read-a77f24d012e3
+
+
+
+https://medium.com/swlh/authenticating-flutter-application-with-laravel-api-caea30abd57
+
+https://www.google.com/search?q=laravel+flutter+crud&client=firefox-b-d&ei=CqCAY5evK9Oamgee_JuABw&oq=laravel+flutter&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgAMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgoIABBHENYEELADMgcIABCwAxBDMgcIABCwAxBDSgQIQRgASgQIRhgAUABYAGD0EmgBcAF4AIABAIgBAJIBAJgBAMgBCsABAQ&sclient=gws-wiz-serp
+
+

@@ -18,6 +18,11 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
+
+        // return response()->json([
+        //     'status' => true,
+        //     'posts' => $posts
+        // ]);        
         return PostResource::collection($posts);
     }
 
@@ -41,6 +46,12 @@ class PostController extends Controller
     {
         $posts = Post::create($request->all());
         
+        // return response()->json([
+        //     'status' => true,
+        //     'message' => "Post Created successfully!",
+        //     'post' => $post
+        // ], 200);
+
         return new PostResource($posts);
     }
 
@@ -77,6 +88,12 @@ class PostController extends Controller
     {
         $post->update($request->all());
         
+        // return response()->json([
+        //     'status' => true,
+        //     'message' => "Post Updated successfully!",
+        //     'post' => $post
+        // ], 200);
+
         return new PostResource($post);
     }
 
@@ -89,6 +106,11 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
+
+        // return response()->json([
+        //     'status' => true,
+        //     'message' => "Post Deleted successfully!",
+        // ], 200);
 
         return response(null, 204);
     }
